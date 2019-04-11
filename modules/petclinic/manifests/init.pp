@@ -24,7 +24,7 @@ class petclinic {
     require => Exec['download-petclinic-war']
   }
   exec { 'download-petclinic-war':
-    command => '/usr/bin/curl -o petclinic.war http://10.0.2.2:18081/artifactory/libs-snapshot-local/org/springframework/samples/spring-petclinic/1.0.1-SNAPSHOT/spring-petclinic-1.0.1-20180829.125504-1.war',
+    command => '/usr/bin/curl -o petclinic.war http://10.0.2.2:18081/artifactory/libs-snapshot-local/org/springframework/samples/spring-petclinic/1.0.1-SNAPSHOT/spring-petclinic-1.0.1-20190411.154125-1.war',
     creates => '/var/lib/tomcat7/webapps/petclinic.war',
     cwd => '/var/lib/tomcat7/webapps',
     require => Package['tomcat7']
